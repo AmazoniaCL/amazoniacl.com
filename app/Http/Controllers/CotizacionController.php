@@ -32,6 +32,14 @@ class CotizacionController extends Controller
         ]);
 
         if ($cotizacion->save()) {
+            $notificacion = Notification::create([
+                'tipo' => 'Cotizaciones',
+                'permiso' => 'cotizaciones',
+                'url' => '/cotizaciones/nuevas',
+                'mensaje' => 'Tiene una cotización nueva',
+            ]);
+
+            $notificacion->save();
             return ['creado' => 1];
         } else {
             return ['creado' => 0];
