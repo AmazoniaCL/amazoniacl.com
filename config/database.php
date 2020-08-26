@@ -63,6 +63,26 @@ return [
             ]) : [],
         ],
 
+        'amazonia_admin' => [
+            'driver' => 'mysql',
+            'url' => env('DATABASE_URL'),
+            'host' => env('ADMIN_HOST', '127.0.0.1'),
+            'port' => env('ADMIN_PORT', '3306'),
+            'database' => env('ADMIN_DATABASE', 'forge'),
+            'username' => env('ADMIN_USERNAME', 'forge'),
+            'password' => env('ADMIN_PASSWORD', ''),
+            'unix_socket' => env('ADMIN_SOCKET', ''),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),

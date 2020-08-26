@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Correo;
 use App\Historial_correo;
+use App\Notification;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -23,6 +24,14 @@ class CorreoController extends Controller {
         ]);
 
         if ($correo->save()) {
+            $notificacion = Notification::create([
+                'tipo' => 'Correos',
+                'permiso' => 'correos',
+                'url' => '/correos/nuevos',
+                'mensaje' => 'Tiene un correo nuevo',
+            ]);
+
+            $notificacion->save();
             return '1';
         } else {
             return '0';

@@ -42,6 +42,8 @@ class CreateCotizacionesTable extends Migration
             $table->longText('trayecto_dos')->nullable();
             $table->enum('aceptada', [0, 1])->nullable();
             $table->bigInteger('responsable_id')->nullable();
+            $table->bigInteger('tercero_id')->nullable();
+            $table->enum('contrato_generado', [0, 1])->nullable();
 
             $table->timestamps();
         });
