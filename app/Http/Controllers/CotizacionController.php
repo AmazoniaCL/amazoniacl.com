@@ -57,6 +57,15 @@ class CotizacionController extends Controller
         $cotizacion->aceptada = "1";
         $cotizacion->save();
 
+        $notificacion = Notification::create([
+            'tipo' => 'Cotizaciones',
+            'permiso' => 'cotizaciones',
+            'url' => '/cotizaciones/aceptadas',
+            'mensaje' => 'El cliente acepto la cotizacion',
+        ]);
+
+        $notificacion->save();
+
         return view('aceptar_cotizacion');
         
     }
