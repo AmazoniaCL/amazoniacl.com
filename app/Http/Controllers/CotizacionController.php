@@ -52,7 +52,7 @@ class CotizacionController extends Controller
 
         $cotizacion = Cotizacion::find($request['id']);
 
-        dd($cotizacion);
+        // dd($cotizacion);
         
         $cotizacion->aceptada = "1";
         $cotizacion->save();
