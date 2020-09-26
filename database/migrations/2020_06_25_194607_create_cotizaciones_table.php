@@ -45,6 +45,14 @@ class CreateCotizacionesTable extends Migration
             $table->bigInteger('tercero_id')->nullable();
             $table->enum('contrato_generado', [0, 1])->nullable();
 
+            $table->bigInteger('vehiculo_id')->nullable();
+            $table->bigInteger('conductor_id')->nullable();
+            $table->bigInteger('responsable_contrato_id')->nullable();
+            $table->string('tipo_contrato')->nullable();
+            $table->string('objeto_contrato')->nullable();
+            $table->longText('contrato_parte_uno')->nullable();
+            $table->longText('contrato_parte_dos')->nullable();
+
             $table->timestamps();
         });
     }
