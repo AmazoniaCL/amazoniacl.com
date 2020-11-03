@@ -79,7 +79,7 @@
 					</div>
 
 					<div class="post-thumb">
-						<img src="http://127.0.0.1:8000/storage/{{ $post->imagen }}" alt="imagen del post">
+						<img src="http://admin.amazoniacl.com/storage/{{ $post->imagen }}" alt="imagen del post">
 					</div>
 
 
@@ -100,7 +100,7 @@
 
                                             @foreach ($post->media_posts as $media)
                                                 <div class="swiper-slide" style="width: 520px !important;">
-                                                    <img src="http://127.0.0.1:8000/storage/{{ $media->imagen }}" alt="photo">
+                                                    <img src="http://admin.amazoniacl.com/storage/{{ $media->imagen }}" alt="photo">
                                                 </div>
                                             @endforeach
 
@@ -113,7 +113,7 @@
                                     <div class="slider-slides">
                                         @foreach ($post->media_posts as $media)
                                             <a href="javascript:;" class="slides-item" style="max-width: 100px;">
-                                                <img src="http://127.0.0.1:8000/storage/{{ $media->imagen }}" alt="slide">
+                                                <img src="http://admin.amazoniacl.com/storage/{{ $media->imagen }}" alt="slide">
                                                 <div class="overlay overlay-dark"></div>
                                             </a>
                                         @endforeach

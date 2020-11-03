@@ -46,5 +46,6 @@ Route::get('/auth/redirect/{provider}', 'SocialController@redirect')->name('goog
 Route::get('/callback/{provider}', 'SocialController@callback');
 
 // Rutas para el Blog
+Route::get('/blog', 'BlogController@index');
 Route::get('/blog/{post}', 'BlogController@post');
 Route::post('/blog/comentar', 'BlogController@comentar');

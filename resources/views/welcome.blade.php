@@ -693,7 +693,7 @@
 
 <!-- Section Subscribe Animation -->
 
-<section class="medium-padding100 subscribe-animation scrollme" style="background:#83a96e;">
+{{-- <section class="medium-padding100 subscribe-animation scrollme" style="background:#83a96e;">
 	<div class="container">
 		<div class="row">
 			<div class="col col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
@@ -702,9 +702,6 @@
 					<p class="heading-text">Suscribete a nuestro newsletter para tenerte informado. Tranquilo, no es span :)
 					</p>
 				</div>
-
-
-				<!-- Subscribe Form  -->
 
 				<form class="form-inline subscribe-form" method="post">
 					<div class="form-group label-floating is-empty">
@@ -715,72 +712,72 @@
 					<button class="btn btn-primary btn-lg">Enviar</button>
 				</form>
 
-				<!-- ... end Subscribe Form  -->
-
 			</div>
 		</div>
 
 		<img src="{{ asset('assets/img/paper-plane.png') }}" alt="plane" class="plane">
 	</div>
-</section>
+</section> --}}
 
 {{-- SECTION BLOG --}}
-<section class="medium-padding120">
-	<div class="container">
-		<div class="row mb60">
-			<div class="col col-xl-4 col-lg-4 m-auto col-md-12 col-sm-12 col-12">
-				<div class="crumina-module crumina-heading align-center">
-					<div class="heading-sup-title">AMZONIA C&L</div>
-					<h2 class="h1 heading-title">Nuestro Blog</h2>
-					<p class="heading-text">Conozca noticias y temas de interes en nuestro blog</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-            @foreach ($posts as $post)
-                <div class="col col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
-
-                    <!-- Post -->
-
-                    <article class="hentry blog-post">
-
-                        <div class="post-thumb" style="max-height: 260px;">
-                            <img src="http://127.0.0.1:8000/storage/{{ $post->imagen }}" alt="photo">
-                        </div>
-
-                        <div class="post-content">
-                            <a href="javascript:;" class="post-category" style="background-color: #5a8d3e;">AMAZONIA C&L</a>
-                            <a href="/blog/{{ $post->slug }}" class="h4 post-title">{{ $post->titulo }}</a>
-
-                            <div class="author-date">
-                                <a class="h6 post__author-name fn" href="/blog/{{ $post->slug }}">{{ $post->fecha }}</a>
-                            </div>
-
-                            <div class="post-additional-info inline-items">
-                                <div class="friends-harmonic-wrap">
-                                </div>
-
-                                <div class="comments-shared">
-                                    <a href="/blog/{{ $post->slug }}" class="post-add-icon inline-items">
-                                        <svg class="olymp-speech-balloon-icon">
-                                            <use xlink:href="{{ asset('assets/svg-icons/sprites/icons.svg#olymp-speech-balloon-icon') }}"></use>
-                                        </svg>
-                                        <span>{{ $post->comments->count() }}</span>
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-
-                    </article>
-
-                    <!-- ... end Post -->
+@if ($posts)
+    <section class="medium-padding120">
+        <div class="container">
+            <div class="row mb60">
+                <div class="col col-xl-4 col-lg-4 m-auto col-md-12 col-sm-12 col-12">
+                    <div class="crumina-module crumina-heading align-center">
+                        <div class="heading-sup-title">AMZONIA C&L</div>
+                        <h2 class="h1 heading-title">Nuestro Blog</h2>
+                        <p class="heading-text">Conozca noticias y temas de interes en nuestro blog</p>
+                    </div>
                 </div>
-            @endforeach
-		</div>
-	</div>
-</section>
+            </div>
+
+            <div class="row">
+                @foreach ($posts as $post)
+                    <div class="col col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12">
+
+                        <!-- Post -->
+
+                        <article class="hentry blog-post">
+
+                            <div class="post-thumb" style="max-height: 260px;">
+                                <img src="http://admin.amazoniacl.com/storage/{{ $post->imagen }}" alt="photo">
+                            </div>
+
+                            <div class="post-content">
+                                <a href="javascript:;" class="post-category" style="background-color: #5a8d3e;">AMAZONIA C&L</a>
+                                <a href="/blog/{{ $post->slug }}" class="h4 post-title">{{ $post->titulo }}</a>
+
+                                <div class="author-date">
+                                    <a class="h6 post__author-name fn" href="/blog/{{ $post->slug }}">{{ $post->fecha }}</a>
+                                </div>
+
+                                <div class="post-additional-info inline-items">
+                                    <div class="friends-harmonic-wrap">
+                                    </div>
+
+                                    <div class="comments-shared">
+                                        <a href="/blog/{{ $post->slug }}" class="post-add-icon inline-items">
+                                            <svg class="olymp-speech-balloon-icon">
+                                                <use xlink:href="{{ asset('assets/svg-icons/sprites/icons.svg#olymp-speech-balloon-icon') }}"></use>
+                                            </svg>
+                                            <span>{{ $post->comments->count() }}</span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </article>
+
+                        <!-- ... end Post -->
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+@endif
 {{-- END SECTION BLOG --}}
 
 <section class="medium-padding120 bg-body contact-form-animation scrollme">

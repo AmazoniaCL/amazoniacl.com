@@ -25,6 +25,7 @@
                                 <a class="dropdown-item" href="/nosotros">Nosotros</a>
                                 {{-- <a class="dropdown-item" href="/sig">SIG</a> --}}
                                 <a class="dropdown-item" href="/parque-automotor">Parque Automotor</a>
+                                <a class="dropdown-item" href="/blog">Blog</a>
                             </div>
                         </li>
                         <li class="nav-item">
