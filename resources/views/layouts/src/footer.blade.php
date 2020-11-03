@@ -33,6 +33,7 @@
 <script src="{{ asset('assets/js/libs/ion.rangeSlider.js') }}"></script>
 <script src="{{ asset('assets/js/libs/leaflet.js') }}"></script>
 <script src="{{ asset('assets/js/libs/MarkerClusterGroup.js') }}"></script>
+<script type="text/javascript" src="https://rawcdn.githack.com/rafaelbotazini/floating-whatsapp/3d18b26d5c7d430a1ab0b664f8ca6b69014aed68/floating-wpp.min.js"></script>
 
 <script src="{{ asset('assets/js/main.js') }}"></script>
 <script src="{{ asset('assets/js/app.js') }}"></script>
@@ -57,7 +58,7 @@
 				$('.departamento_destino').html(html)
 			}
         })
-        
+
         $('.form_cotizacion').submit(function () {
             $.ajax({
                 url: '/create/cotizacion',

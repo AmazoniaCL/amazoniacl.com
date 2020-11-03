@@ -88,7 +88,7 @@
 								@csrf
 
 								<div class="row">
-							
+
 									<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 										<div class="form-group label-floating">
 											<label class="control-label">Nombre completo</label>
@@ -119,7 +119,7 @@
 										<button type="submit" class="btn btn-primary btn-lg full-width">Registrarse</button>
 
 										<div class="or"></div>
-				
+
 										<a href="/auth/redirect/google" class="btn btn-lg bg-google full-width btn-icon-left px-0"><i class="fab fa-google" aria-hidden="true"></i>Ingresar con Google</a>
 									</div>
 								</div>
@@ -151,9 +151,9 @@
 												<strong>{{ $message }}</strong>
 											</span>
 										@enderror
-				
+
 										<div class="remember">
-				
+
 											<div class="checkbox">
 												<label>
 													<input name="optionsCheckboxes" type="checkbox">
@@ -162,13 +162,13 @@
 											</div>
 											{{-- <a href="#" class="forgot" data-toggle="modal" data-target="#restore-password">Olvide mi contraseña</a> --}}
 										</div>
-				
+
 										<button type="submit" class="btn btn-lg btn-primary full-width">Ingresar</button>
-				
+
 										<div class="or"></div>
-				
+
 										<a href="/auth/redirect/google" class="btn btn-lg bg-google full-width btn-icon-left px-0"><i class="fab fa-google" aria-hidden="true"></i>Ingresar con Google</a>
-				
+
 										<p>Aun no tienes una cuenta? <a href="#" data-toggle="modal" data-target="#registration-login-form-popup">Registrate Ahora!</a> Es realmente facil y disfruta de los beneficios.</p>
 									</div>
 								</div>
@@ -199,7 +199,7 @@
 							</a>
 						</li>
 					</ul>
-				
+
 					<!-- Tab panes -->
 					<div class="tab-content">
 						<div class="tab-pane active" id="home" role="tabpanel" data-mh="log-tab">
@@ -208,7 +208,7 @@
 								@csrf
 
 								<div class="row">
-									
+
 									<div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 										<div class="form-group label-floating">
 											<label class="control-label">Nombre Completo</label>
@@ -223,7 +223,7 @@
 											<input class="form-control" name="telefono" placeholder="" type="number">
 										</div>
 									</div>
-									
+
 									<div class="col-12">
 										<label>Origen</label>
 									</div>
@@ -263,7 +263,7 @@
 											</select>
 										</div>
 									</div>
-                                    
+
                                     <div class="col col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12">
 										<div class="form-group date-time-picker label-floating">
 											<label class="control-label">Fecha de Ida</label>
@@ -334,7 +334,7 @@
 											</label>
 										</div>
 									</div>
-                                    
+
                                     <div class="col col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
 										<div class="remember">
 											<div class="checkbox">
@@ -344,7 +344,7 @@
 												</label>
 											</div>
 										</div>
-				
+
 										<button type="submit" class="btn btn-primary btn-lg full-width">Cotizar!</button>
 									</div>
 
@@ -444,11 +444,11 @@
 		<div class="row">
 			<div class="col col-lg-4 col-md-4 col-sm-12 col-12">
 
-				
+
 				<!-- Widget About -->
-				
+
 				<div class="widget w-about">
-				
+
 					<a href="02-ProfilePage.html" class="logo">
 						<div class="img-wrap">
 							<img src="{{ asset('assets/img/page/logo.png') }}" width="190" alt="Amazonia">
@@ -462,8 +462,8 @@
 							</a>
 						</li>
 						<li>
-							<a href="https://twitter.com/amazoniacl" target="_blank">
-								<i class="fab fa-twitter" aria-hidden="true"></i>
+							<a href="https://www.instagram.com/amazoniacl/" target="_blank">
+								<i class="fab fa-instagram" aria-hidden="true"></i>
 							</a>
 						</li>
 						<li>
@@ -473,16 +473,16 @@
 						</li>
 					</ul>
 				</div>
-				
+
 				<!-- ... end Widget About -->
 
             </div>
 
 			<div class="col col-lg-4 col-md-4 col-sm-6 col-6 align-right">
 
-				
+
 				<!-- Widget List -->
-				
+
 				<div class="widget w-list">
 					<h6 class="title">Accesos</h6>
 					<ul>
@@ -500,13 +500,13 @@
 						</li>
 					</ul>
 				</div>
-				
+
 				<!-- ... end Widget List -->
 
 			</div>
 			<div class="col col-lg-4 col-md-4 col-sm-6 col-6 align-right">
 
-				
+
 				<div class="widget w-list">
 					<h6 class="title">Contacto</h6>
 					<ul>
@@ -529,15 +529,15 @@
 
 			<div class="col col-lg-12 col-md-12 col-sm-12 col-12">
 
-				
+
 				<!-- SUB Footer -->
-				
+
 				<div class="sub-footer-copyright">
 					<span>
 						Copyright <a href="/">Amazonia C&L</a> Todos los derechos reservados 2020
 					</span>
 				</div>
-				
+
 				<!-- ... end SUB Footer -->
 
 			</div>
@@ -765,6 +765,8 @@
 <a class="back-to-top" href="#">
 	<img src="{{ asset('assets/svg-icons/back-to-top.svg') }}" alt="arrow" class="back-icon">
 </a>
+
+<div id="WAButton"></div>
 
 
 

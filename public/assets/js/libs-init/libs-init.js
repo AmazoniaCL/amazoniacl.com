@@ -565,12 +565,14 @@ $(document).ready(function () {
 
 		var $effect = ($t.data('effect')) ? $t.data('effect') : 'slide',
 			$crossfade = ($t.data('crossfade')) ? $t.data('crossfade') : true,
-			$loop = ($t.data('loop') == false) ? $t.data('loop') : true,
+			$loop = true,
+			// $loop = ($t.data('loop') == false) ? $t.data('loop') : true,
 			$showItems = ($t.data('show-items')) ? $t.data('show-items') : 1,
 			$scrollItems = ($t.data('scroll-items')) ? $t.data('scroll-items') : 1,
 			$scrollDirection = ($t.data('direction')) ? $t.data('direction') : 'horizontal',
 			$mouseScroll = ($t.data('mouse-scroll')) ? $t.data('mouse-scroll') : false,
-			$autoplay = ($t.data('autoplay')) ? parseInt($t.data('autoplay'), 10) : 0,
+			// $autoplay = ($t.data('autoplay')) ? parseInt($t.data('autoplay'), 10) : 0,
+			$autoplay = parseInt($t.data('autoplay'), 100),
 			$autoheight = ($t.hasClass('auto-height')) ? true: false,
 			$slidesSpace = ($showItems > 1) ? 20 : 0;
 
@@ -600,9 +602,9 @@ $(document).ready(function () {
 			setWrapperSize: true,
 			preloadImages: true,
 			updateOnImagesReady: true,
-			autoplay: $autoplay,
+			autoplay: 3000,
 			autoHeight: $autoheight,
-			loop: $loop,
+			loop: true,
 			breakpoints: $breakPoints,
 			effect: $effect,
 			fade: {

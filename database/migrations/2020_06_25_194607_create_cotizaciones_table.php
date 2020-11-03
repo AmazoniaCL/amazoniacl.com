@@ -53,6 +53,9 @@ class CreateCotizacionesTable extends Migration
             $table->longText('contrato_parte_uno')->nullable();
             $table->longText('contrato_parte_dos')->nullable();
 
+            $table->longText('cotizacion_parte_uno')->nullable();
+            $table->longText('cotizacion_parte_dos')->nullable();
+
             $table->timestamps();
         });
     }
@@ -67,3 +70,4 @@ class CreateCotizacionesTable extends Migration
         Schema::dropIfExists('cotizaciones');
     }
 }
+

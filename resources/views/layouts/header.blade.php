@@ -1,4 +1,4 @@
-<div class="header--standard header--standard-landing" id="header--standard">
+<div class="header--standard header--standard-landing {{ Request::is('/') ? 'animated headroom--not-bottom headroom--not-top' : '' }}" id="{{ Request::is('/') ? '' : 'header--standard' }}">
     <div class="container">
         <div class="header--standard-wrap">
 
@@ -23,7 +23,7 @@
                             <a class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false" tabindex='1'>Quienes somos</a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="/nosotros">Nosotros</a>
-                                <a class="dropdown-item" href="/sig">SIG</a>
+                                {{-- <a class="dropdown-item" href="/sig">SIG</a> --}}
                                 <a class="dropdown-item" href="/parque-automotor">Parque Automotor</a>
                             </div>
                         </li>
@@ -75,7 +75,7 @@
                                     @guest
                                         <a href="#" data-toggle="modal" data-target="#registration-login-form-popup" class="btn btn-primary btn-sm">Iniciar sesión o registrarse</a>
                                     @endguest
-                                    
+
                                 </div>
                             </div>
                         </li>
