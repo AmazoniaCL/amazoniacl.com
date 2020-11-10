@@ -742,7 +742,7 @@
                         <article class="hentry blog-post">
 
                             <div class="post-thumb" style="max-height: 260px;">
-                                <img src="http://admin.amazoniacl.com/storage/{{ $post->imagen }}" alt="photo">
+                                <img src="https://admin.amazoniacl.com/storage/{{ $post->imagen }}" alt="photo">
                             </div>
 
                             <div class="post-content">
