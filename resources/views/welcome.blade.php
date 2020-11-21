@@ -33,6 +33,13 @@
 							<img src="{{ asset('assets/img/page/acarreos.jpg') }}" alt="photo">
 							<div class="overlay"></div>
 						</div>
+                    </div>
+
+                    <div class="swiper-slide">
+						<div class="photo-item">
+							<img src="{{ asset('assets/img/page/servicio especial.jpg') }}" alt="photo">
+							<div class="overlay"></div>
+						</div>
 					</div>
 
 					<div class="swiper-slide">
