@@ -49,3 +49,7 @@ Route::get('/callback/{provider}', 'SocialController@callback');
 Route::get('/blog', 'BlogController@index');
 Route::get('/blog/{post}', 'BlogController@post');
 Route::post('/blog/comentar', 'BlogController@comentar');
+
+// APP Routes Utilitaries
+Route::post('/app/sistema/get/departamentos', 'AdminController@departamentos');
+Route::post('/app/sistema/get/municipios', 'AdminController@municipios');
