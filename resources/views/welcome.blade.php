@@ -30,14 +30,14 @@
 
                     <div class="swiper-slide">
 						<div class="photo-item">
-							<img src="{{ asset('assets/img/page/acarreos.jpg') }}" alt="photo">
+							<img src="{{ asset('assets/img/page/acarreos_01.jpg') }}" alt="photo">
 							<div class="overlay"></div>
 						</div>
                     </div>
 
                     <div class="swiper-slide">
 						<div class="photo-item">
-							<img src="{{ asset('assets/img/page/servicio especial.jpg') }}" alt="photo">
+							<img src="{{ asset('assets/img/page/servicio-especial.jpg') }}" alt="photo">
 							<div class="overlay"></div>
 						</div>
 					</div>
@@ -427,7 +427,7 @@
 					<article class="hentry blog-post">
 
 						<div class="post-thumb">
-							<img src="{{ asset('assets/img/page/acarreos.jpg') }}" alt="photo">
+							<img src="{{ asset('assets/img/page/acarreos_01.jpg') }}" alt="photo">
 						</div>
 
 						<div class="post-content">
