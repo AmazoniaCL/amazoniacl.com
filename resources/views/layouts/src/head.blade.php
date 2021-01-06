@@ -21,6 +21,8 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/main.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/fonts.min.css') }}">
 
+    <script data-ad-client="ca-pub-6033859300113571" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
     @yield('styles')
 
 	<!-- Main Font -->
