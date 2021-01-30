@@ -175,6 +175,8 @@
 								<div class="form-group">
 									<textarea class="form-control" placeholder="Escriba su mensaje" name="mensaje" required></textarea>
 								</div>
+
+								<input type="text" name="bot" class="d-none" id="bots_verificador">
 				
 								<button type="submit" id="btn-correo" class="btn btn-primary btn-lg full-width">Enviar</button>
 							</div>
@@ -184,6 +186,29 @@
 				
 				<!-- ... end Contacts Form -->
 
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade bs-example-modal-xl" id="modalpasees" tabindex="-1" role="dialog" aria-labelledby="modal-blade-title" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title mt-0" id="modal-title-cotizacion">Confirmar</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">  
+					<h6>Acepto que he leído la política de protección de datos personales <a href="javascript:void(0)" class="text-primary">Ver Politicas.<a></h6>
+
+						<div class="checkbox mt-3"><label><input onclick="activar_btn()" type="checkbox" id="enableCheckbox"> Acepto</label></div>
+
+					<div class="row mt-3">
+						<button type="button" id="btn_acept_boot" class="btn btn-primary btn-sm" disabled>Aceptar</button>
+						<button type="button" id="" class="btn btn-secondary btn-sm ml-2" class="close" data-dismiss="modal" aria-label="Close">Cancelar</button>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
