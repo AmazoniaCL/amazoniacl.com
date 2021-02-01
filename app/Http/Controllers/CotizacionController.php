@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Notification;
 use App\Cotizacion;
+use App\Cotizaciones;
 use Carbon\Carbon;
 
 class CotizacionController extends Controller
@@ -50,12 +51,20 @@ class CotizacionController extends Controller
 
     public function aceptar(Request $request) {
 
-        $cotizacion = Cotizacion::find($request['id']);
+        if($request['tabla']==1){
+            $cotizacion = Cotizacion::find($request['id']);
 
-        // dd($cotizacion);
-        
-        $cotizacion->aceptada = "1";
-        $cotizacion->save();
+            // dd($cotizacion);
+            
+            $cotizacion->aceptada = "1";
+            $cotizacion->save();
+        }else{
+            $cotizacion = Cotizaciones::find($request['id']);
+            $cotizacion->aceptada = "1";
+            $cotizacion->save();
+        }
+
+
 
         $notificacion = Notification::create([
             'tipo' => 'Cotizaciones',

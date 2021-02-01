@@ -34,7 +34,7 @@ Route::get('/responder/correo/{id}', 'CorreoController@historial');
 Route::post('/responder/correo', 'CorreoController@responder');
 
 Route::post('/create/cotizacion', 'CotizacionController@create');
-Route::get('/aceptar/cotizacion/{id}', 'CotizacionController@aceptar');
+Route::get('/aceptar/cotizacion/{id}/{tabla}', 'CotizacionController@aceptar');
 
 Route::post('/create/correo', 'CorreoController@create');
 
