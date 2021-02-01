@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 use App\Notification;
 use App\Cotizacion;
 use App\Cotizaciones;
+use App\Mail\MailAceptarCotizacion;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Mail;
 
 class CotizacionController extends Controller
 {
@@ -53,16 +55,18 @@ class CotizacionController extends Controller
 
         if($request['tabla']==1){
             $cotizacion = Cotizacion::find($request['id']);
-
-            // dd($cotizacion);
             
             $cotizacion->aceptada = "1";
             $cotizacion->save();
         }else{
-            $cotizacion = Cotizaciones::find($request['id']);
+            $cotizacion = Cotizaciones::join('terceros', 'terceros.id', '=', 'cotizaciones.tercero_id')->find($request['id']);
             $cotizacion->aceptada = "1";
             $cotizacion->save();
         }
+
+        $correo='calidad@amazoniacl.com';
+
+         Mail::to($correo)->send(new MailAceptarCotizacion(Cotizaciones::join('terceros', 'terceros.id', '=', 'cotizaciones.tercero_id')->find($request['id'])));
 
 
 
